@@ -1,0 +1,26 @@
+//?Résumé khfif en Darija (alphabet latin)
+
+Hada muqaddima bach n-organiziw l-khadma f l-projet b-conventions:
+
+//!Branches
+- Branches: `main` (production), `develop` (integration), `feature/<id>-<nom>` (khadma jdida), `hotfix/<nom>` (sla7 d-urgence). PR lazma qbl merge.
+//!Commits
+- Commits: n-ktbo b-Conventional Commits, bhal `feat(auth): login b-email` (type + scope + description).
+//!EditorConfig
+- EditorConfig: fichier bach n-synchroniziw settings d-editor.
+//!Lint & Format
+- Lint & Format: 
+  - PHP: Laravel Pint (`composer lint:php`, `composer format:php`).
+  - JS/TS: ESLint + Prettier (`npm run lint:js`, `npm run format:js`).
+//!Pre-commit
+- Pre-commit: Husky + lint-staged y-verifiw l-code otomatik qbl commit.
+//!CI
+- CI: GitHub Actions y-lintiw l-code f PRs.
+//!DoD
+- DoD: branches smiyathom mzyan, commits mrtba, lint y-passi, CI khadra.
+
+**Cheatsheet**:
+
+git checkout -b feature/123-nom
+git commit -m "feat(nom): ajouter fonction"
+composer lint:php && npm run lint:js
